@@ -8,22 +8,23 @@ src/
     └── mail/
         ├── mail.module.ts
         ├── mail.service.ts
-        ├── templates/
-        │   ├── layouts/
-        │   │   └── base.hbs          # Main layout wrapper
-        │   ├── partials/
-        │   │   ├── header.hbs       # Reusable header
-        │   │   ├── footer.hbs       # Reusable footer
-        │   │   └── button.hbs       # Reusable button component
-        │   ├── auth/
-        │   │   ├── otp.hbs
-        │   │   └── reset-password.hbs
-        │   ├── marketing/
-        │   │   └── welcome.hbs
-        │   └── shared/              # Optional: shared components
-        │       └── button.hbs
         └── dto/                      # Optional: DTOs for email data
             └── send-email.dto.ts
+└── templates/
+   │   ├── layouts/
+   │   │   └── base.hbs          # Main layout wrapper
+   │   ├── partials/
+   │   │   ├── header.hbs       # Reusable header
+   │   │   ├── footer.hbs       # Reusable footer
+   │   │   └── button.hbs       # Reusable button component
+   │   ├── auth/
+   │   │   ├── otp.hbs
+   │   │   └── reset-password.hbs
+   │   ├── marketing/
+   │   │   └── welcome.hbs
+   │   └── shared/              # Optional: shared components
+   │       └── button.hbs
+
 ```
 
 ## 📋 Structure Guidelines

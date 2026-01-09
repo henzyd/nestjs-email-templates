@@ -51,14 +51,8 @@ Examples:
     console.log(`📧 Sending welcome email to ${recipientEmail}...`);
 
     await mailService.sendWelcomeEmail(recipientEmail, recipientName, {
-      companyName: 'Email Templates',
       buttonUrl: buttonUrl || 'https://example.com/get-started',
-      footerText: 'Thank you for joining us! We look forward to serving you.',
-      socialLinks: {
-        twitter: 'https://twitter.com/company',
-        linkedin: 'https://linkedin.com/company/company',
-        instagram: 'https://instagram.com/company',
-      },
+      courseName: 'NestJS Email Templates',
     });
 
     console.log('✅ Welcome email sent successfully!');

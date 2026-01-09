@@ -1,0 +1,30 @@
+{{#> base}}
+<h1>Welcome to {{courseName}}</h1>
+
+<p>Hi
+  {{name}},<br />Amazing! Your enrollment in
+  {{courseName}}
+  is confirmed. You now have full access to every lesson, assignment, and
+  resource inside this course. This is a big step toward leveling up your skills
+  and we're excited to see you start learning!</p>
+
+<p>Your account has been successfully created and you're all set to get started.
+  Here's what you can do next:</p>
+
+<ul style='margin-left: 20px; margin-bottom: 20px;'>
+  <li>Explore our platform and discover all the features</li>
+  <li>Complete your profile to personalize your experience</li>
+  <li>Get in touch with our support team if you have any questions</li>
+</ul>
+
+{{#if buttonUrl}}
+  <div style='text-align: center;'>
+    <a href='{{buttonUrl}}' class='button'>Get Started</a>
+  </div>
+{{/if}}
+
+<p>If you have any questions or need assistance, feel free to reach out to us.
+  We're here to help!</p>
+
+<p>Stay learning,<br />The Dreamax Team</p>
+{{/base}}

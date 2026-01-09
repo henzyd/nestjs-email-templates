@@ -6,10 +6,13 @@
     "deleteOutDir": true,
     "assets": [
       {
-        "include": "modules/mail/templates/**/*",
-        "outDir": "dist"
+        "include": "templates/**/*.hbs",
+        "exclude": "**/*.ts",
+        "outDir": "dist/src/templates",
+        "watchAssets": true
       }
-    ]
+    ],
+    "watchAssets": true
   },
   "generateOptions": {
     "flat": false,

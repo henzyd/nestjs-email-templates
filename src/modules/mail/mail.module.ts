@@ -19,6 +19,8 @@ import { MailService } from './mail.service';
           throw new Error('Missing required SMTP environment variables');
         }
 
+        const templatesDir = join(process.cwd(), 'src', 'templates');
+
         return {
           transport: isProduction
             ? {
@@ -37,13 +39,21 @@ import { MailService } from './mail.service';
             from: 'Email Templates <onboarding@zydcode.com>',
           },
           template: {
-            dir: join(__dirname, 'templates'),
+            dir: templatesDir,
             adapter: new HandlebarsAdapter(),
             options: {
               strict: true,
             },
           },
           preview: !isProduction,
+          options: {
+            partials: {
+              dir: join(templatesDir, 'partials'),
+              options: {
+                strict: true,
+              },
+            },
+          },
         };
       },
     }),

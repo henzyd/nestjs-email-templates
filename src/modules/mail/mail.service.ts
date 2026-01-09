@@ -9,45 +9,39 @@ export class MailService {
   async sendWelcomeEmail(
     to: string,
     name: string,
-    options?: {
-      buttonUrl?: string;
-      companyName?: string;
-      footerText?: string;
-      socialLinks?: {
-        twitter?: string;
-        linkedin?: string;
-        instagram?: string;
-      };
+    options: {
+      buttonUrl: string;
+      courseName: string;
     },
   ) {
-    const currentYear = new Date().getFullYear();
-    const companyName = options?.companyName || 'Our Company';
-    const footerText =
-      options?.footerText ||
-      'Thank you for joining us! We look forward to serving you.';
-
     await this.mailerService.sendMail({
       to,
-      subject: `Welcome to ${companyName}!`,
-      template: 'welcome',
+      subject: `Welcome to ${options.courseName}!`,
+      template: './welcome',
       context: {
+        ASSETS,
         name,
-        title: `Welcome to ${companyName}`,
-        companyName,
-        logo: ASSETS.email.logo,
-        buttonUrl: options?.buttonUrl,
-        footerText,
-        currentYear,
-        socialLinks: options?.socialLinks
-          ? {
-              twitter: options.socialLinks.twitter,
-              linkedin: options.socialLinks.linkedin,
-              instagram: options.socialLinks.instagram,
-              twitterIcon: ASSETS.email.twitterIcon,
-              linkedinIcon: ASSETS.email.linkedinIcon,
-              instagramIcon: ASSETS.email.instagramIcon,
-            }
-          : undefined,
+        title: `Welcome to ${options.courseName}!`,
+        ...options,
+      },
+    });
+  }
+
+  async sendResetPasswordEmail(
+    to: string,
+    name: string,
+    options: {
+      buttonUrl: string;
+    },
+  ) {
+    await this.mailerService.sendMail({
+      to,
+      subject: `Reset Your Password`,
+      template: 'reset-password',
+      context: {
+        ASSETS,
+        name,
+        ...options,
       },
     });
   }
