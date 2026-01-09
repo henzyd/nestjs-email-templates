@@ -1,30 +1,118 @@
 {{#> base}}
-<h1>Welcome to {{courseName}}</h1>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff;">
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      <h1 style="margin: 0; padding: 0; font-size: 28px; font-weight: 700; line-height: 1.3; color: #1A2028;">
+        Welcome to Dreamax — Your Learning Journey Starts Now!
+      </h1>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      <p style="margin: 0; padding: 0; font-size: 16px; line-height: 1.2; color: #1A2028;">
+        Hi {{name}},<br />
+        Welcome to Dreamax! We're excited to have you on board. You've just joined a community of thousands of learners leveling up their skills, building real projects, and unlocking new opportunities every day.
+      </p>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      {{> button url=buttonUrl text="Enroll Now"}}
+    </>
+  </tr>
+  
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      <h3 style="font-size: 16px; font-weight: 600; margin-top: 0px; margin-bottom: 18px;">Here's what you can expect:</h3>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <!-- First Card -->
+        <tr>
+          <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; background-color: #F8F8F8; border-radius: 8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="40" valign="top">
+                  <img src="{{ASSETS.starIcon}}" alt="Star Icon" width="32" style="display: block;">
+                </td>
+                <td width="12"></td>
+                <td valign="top">
+                  <p style="font-weight: 600; margin: 0;">Learn Anytime</p>
+                  <p style="font-size: 14px; margin-bottom: 0; margin-top: 8px;">Access practical, beginner-friendly courses designed to help you grow fast.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Spacer -->
+        <tr>
+          <td height="16"></td>
+        </tr>
+        
+        <!-- Second Card -->
+        <tr>
+          <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; background-color: #F8F8F8; border-radius: 8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="40" valign="top">
+                  <img src="{{ASSETS.targetIcon}}" alt="Target Icon" width="32" style="display: block;">
+                </td>
+                <td width="12"></td>
+                <td valign="top">
+                  <p style="font-weight: 600; margin: 0;">Track Your Progress</p>
+                  <p style="font-size: 14px; margin-bottom: 0; margin-top: 8px;">See your achievements, streaks, and milestones as you advance.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Spacer -->
+        <tr>
+          <td height="16"></td>
+        </tr>
+        
+        <!-- Third Card -->
+        <tr>
+          <td style="padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; background-color: #F8F8F8; border-radius: 8px;">     
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="40" valign="top">
+                  <img src="{{ASSETS.trophyIcon}}" alt="Trophy Icon" width="32" style="display: block;">
+                </td>
+                <td width="12"></td>
+                <td valign="top">
+                  <p style="font-weight: 600; margin: 0;">Earn Certificates</p>
+                  <p style="font-size: 14px; margin-bottom: 0; margin-top: 8px;">Complete courses and earn verifiable certificates you can share with employers.</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      <p style="margin: 0; padding: 0; font-size: 14px; color: #1A2028;">
+        You’re all set to begin. Log in anytime to continue your journey.
+      </p>
+    </td>
+  </tr>
 
-<p>Hi
-  {{name}},<br />Amazing! Your enrollment in
-  {{courseName}}
-  is confirmed. You now have full access to every lesson, assignment, and
-  resource inside this course. This is a big step toward leveling up your skills
-  and we're excited to see you start learning!</p>
-
-<p>Your account has been successfully created and you're all set to get started.
-  Here's what you can do next:</p>
-
-<ul style='margin-left: 20px; margin-bottom: 20px;'>
-  <li>Explore our platform and discover all the features</li>
-  <li>Complete your profile to personalize your experience</li>
-  <li>Get in touch with our support team if you have any questions</li>
-</ul>
-
-{{#if buttonUrl}}
-  <div style='text-align: center;'>
-    <a href='{{buttonUrl}}' class='button'>Get Started</a>
-  </div>
-{{/if}}
-
-<p>If you have any questions or need assistance, feel free to reach out to us.
-  We're here to help!</p>
-
-<p>Stay learning,<br />The Dreamax Team</p>
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px;">
+      {{> button url="https://staging.student.dreamaxhq.com/login" text="Login"}}
+    </>
+  </tr>
+  
+  <tr>
+    <td style="padding-left: 60px; padding-right: 60px; padding-top: 32px; padding-bottom: 32px;">
+      <p style="margin: 0; padding: 0; font-size: 16px; line-height: 1.6; color: #1A2028;">
+        Stay learning,<br />
+        The Dreamax Team
+      </p>
+    </td>
+  </tr>
+</table>
 {{/base}}
