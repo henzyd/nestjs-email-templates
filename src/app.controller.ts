@@ -16,10 +16,7 @@ export class AppController {
 
   @Get('mail')
   async sendMail(): Promise<string> {
-    await this.mailService.sendWelcomeEmail('henzyd.dev@gmail.com', 'Henzyd', {
-      buttonUrl: 'https://www.google.com',
-      courseName: 'Test Course',
-    });
+    await this.mailService.sendWelcomeEmail('henzyd.dev@gmail.com', 'Henzyd');
     return 'Mail sent';
   }
 }
