@@ -83,17 +83,12 @@ export class MailService {
     });
   }
 
-  async sendWelcomeEmail(
-    to: string,
-    name: string,
-    options: Pick<SendEmailOptions, 'buttonUrl' | 'courseName'>,
-  ): Promise<void> {
+  async sendWelcomeEmail(to: string, name: string): Promise<void> {
     const title = 'Welcome to Dreamax — Your Learning Journey Starts Now!';
 
     await this.sendEmail(to, title, 'welcome', {
       name,
       title,
-      ...options,
     });
   }
 
