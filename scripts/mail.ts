@@ -50,10 +50,16 @@ Examples:
   try {
     console.log(`📧 Sending welcome email to ${recipientEmail}...`);
 
-    await mailService.sendWelcomeEmail(recipientEmail, recipientName, {
-      buttonUrl: buttonUrl || 'https://example.com/get-started',
-      courseName: 'NestJS Email Templates',
-    });
+    await mailService.sendWelcomeEmail(recipientEmail, recipientName);
+
+    await mailService.sendCourseEnrollmentConfirmationEmail(
+      recipientEmail,
+      recipientName,
+      {
+        buttonUrl: buttonUrl || 'https://example.com/get-started',
+        courseName: 'NestJS Email Templates',
+      },
+    );
 
     console.log('✅ Welcome email sent successfully!');
   } catch (error) {
