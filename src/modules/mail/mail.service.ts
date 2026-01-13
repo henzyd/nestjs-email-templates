@@ -24,8 +24,9 @@ interface EmailContext {
   ASSETS: AssetUrls;
   name: string;
   title?: string;
-  buttonUrl: string;
+  buttonUrl?: string;
   courseName?: string;
+  content?: string;
 }
 
 @Injectable()
@@ -114,6 +115,18 @@ export class MailService {
     await this.sendEmail(to, 'Reset Your Password', 'reset-password', {
       name,
       ...options,
+    });
+  }
+
+  async sendGeneralEmail(
+    to: string,
+    name: string,
+    options: { title: string; content: string },
+  ): Promise<void> {
+    await this.sendEmail(to, options.title, 'general', {
+      name,
+      title: options.title,
+      content: options.content,
     });
   }
 }
