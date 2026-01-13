@@ -52,19 +52,19 @@ Examples:
 
     // await mailService.sendWelcomeEmail(recipientEmail, recipientName);
 
-    // await mailService.sendCourseEnrollmentConfirmationEmail(
-    //   recipientEmail,
-    //   recipientName,
-    //   {
-    //     buttonUrl: buttonUrl || 'https://example.com/get-started',
-    //     courseName: 'NestJS Email Templates',
-    //   },
-    // );
+    await mailService.sendCourseEnrollmentConfirmationEmail(
+      recipientEmail,
+      recipientName,
+      {
+        buttonUrl: buttonUrl || 'https://example.com/get-started',
+        courseName: 'NestJS Email Templates',
+      },
+    );
 
-    await mailService.sendGeneralEmail(recipientEmail, recipientName, {
-      title: 'General Email',
-      content: 'This is a general email',
-    });
+    // await mailService.sendGeneralEmail(recipientEmail, recipientName, {
+    //   title: 'General Email',
+    //   content: 'This is a general email',
+    // });
 
     console.log('✅ Welcome email sent successfully!');
   } catch (error) {
